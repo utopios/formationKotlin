@@ -1,5 +1,5 @@
 package formation.kotlin.classes
-class Student: Person {
+internal class Student: Person {
     var level : Int? = null
     var informations : String? = null
     constructor(firstName:String) : super(firstName) {

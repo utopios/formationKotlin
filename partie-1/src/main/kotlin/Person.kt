@@ -1,4 +1,7 @@
 package formation.kotlin.classes
+
+import IDisplyable
+
 /*class Person (firstName:String, lastName: String) {
     var firstName = firstName
     var age:Int = 0
@@ -17,10 +20,10 @@ package formation.kotlin.classes
 }*/
 
 //Déclarer une classe dont on peut hériter
-open class Person() {
+open class Person(): IDisplyable {
     var firstName:String? = null
     var lastName:String? = null
-    var age:Int? = null
+    open var age:Int? = null
     init {
         //Logique constructeur
     }
@@ -34,7 +37,7 @@ open class Person() {
         this.age = age
     }
 
-    open fun display() {
+    override fun display() {
         println("${this.firstName} ${this.lastName} ${this.age}")
     }
 }

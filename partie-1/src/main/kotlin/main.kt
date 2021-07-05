@@ -3,6 +3,7 @@
 //kotlin, collections, io, ranges text
 //java.lang.*
 import formation.kotlin.*
+import formation.kotlin.classes.Car
 import formation.kotlin.classes.Person
 import formation.kotlin.classes.Student
 import kotlin.*
@@ -123,7 +124,7 @@ fun main() {
 
     //Récupérer le resultat d'une fonctions dans le scope d'une expression lambda
     additionMultipleArgs(4,5,6).let { println(it) }*/
-    val p1 = Person("abadi","ihab", 33)
+    /*val p1 = Person("abadi","ihab", 33)
     val p2 = Person()
     println(p1.firstName + " "+p1.lastName + " "+p1.age)
 
@@ -131,5 +132,9 @@ fun main() {
     /*s1.makeAllInformationAndDisplay()
     println(s1.informations)*/
     s1.display()
-    println(s1::class.qualifiedName)
+    println(s1::class.qualifiedName)*/
+
+    val c1 = Car()
+    c1.model = "Kia"
+    c1.display()
 }
