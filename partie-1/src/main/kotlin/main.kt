@@ -134,7 +134,16 @@ fun main() {
     s1.display()
     println(s1::class.qualifiedName)*/
 
-    val c1 = Car()
+    /*val c1 = Car()
     c1.model = "Kia"
-    c1.display()
+    c1.display()*/
+    /*val isNotEven = object : IntPredicate {
+        override fun accept(element: Int): Boolean {
+            return element % 2 != 0
+        }
+    }*/
+
+    val isNotEven = IntPredicate { it % 2 != 0 }
+
+    println(isNotEven.accept(25))
 }
