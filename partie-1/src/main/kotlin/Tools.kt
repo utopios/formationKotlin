@@ -23,5 +23,15 @@ infix fun Int.Multiple(x:Int):Int {
     return this * x
 }
 
+//Fonction avec générique
 
+fun<T> displayGeneric(element:T) {
+    println(element)
+}
+
+//Exemple HOF
+
+fun wrapHOF(fonction:(String)->Unit, message:String) {
+    fonction(message)
+}
 

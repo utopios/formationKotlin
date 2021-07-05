@@ -2,9 +2,9 @@
 //Auto-import
 //kotlin, collections, io, ranges text
 //java.lang.*
-import formation.kotlin.Multiple
-import formation.kotlin.addition
-import formation.kotlin.additionMultipleArgs
+import formation.kotlin.*
+import formation.kotlin.classes.Person
+import formation.kotlin.classes.Student
 import kotlin.*
 import formation.kotlin.convertToString as converter
 fun main() {
@@ -110,7 +110,26 @@ fun main() {
     //Exemple avec import
     //converter()
     //println(addition(b=30))
-    println(additionMultipleArgs(1,2,5))
+    /*println(additionMultipleArgs(1,2,5))
 
     println(2 Multiple 5)
+
+    displayGeneric("toto")
+    displayGeneric(10)
+
+    wrapHOF({m->println(m)}, "toto")
+    val maFonction : (String,Int) -> Unit = { e1, e2->println(e1 + e2)}
+    wrapHOF({ println(it) }, "toto")
+
+    //Récupérer le resultat d'une fonctions dans le scope d'une expression lambda
+    additionMultipleArgs(4,5,6).let { println(it) }*/
+    val p1 = Person("abadi","ihab", 33)
+    val p2 = Person()
+    println(p1.firstName + " "+p1.lastName + " "+p1.age)
+
+    val s1:Person = Student("toto", "tata", 40, 5)
+    /*s1.makeAllInformationAndDisplay()
+    println(s1.informations)*/
+    s1.display()
+    println(s1::class.qualifiedName)
 }
