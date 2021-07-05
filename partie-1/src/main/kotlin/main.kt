@@ -4,6 +4,7 @@
 //java.lang.*
 import formation.kotlin.*
 import formation.kotlin.classes.Car
+import formation.kotlin.classes.DataPerson
 import formation.kotlin.classes.Person
 import formation.kotlin.classes.Student
 import kotlin.*
@@ -143,7 +144,23 @@ fun main() {
         }
     }*/
 
-    val isNotEven = IntPredicate { it % 2 != 0 }
+    //val isNotEven = IntPredicate { it % 2 != 0 }
 
-    println(isNotEven.accept(25))
+    //println(isNotEven.accept(25))
+
+    /*val dataP1 = DataPerson("toto", "tata",30)
+    println(dataP1)
+    val dataP2 = dataP1.copy(age = 33)
+    println(dataP2)*/
+    val listeEntier: MutableList<Int> = mutableListOf(45,35)
+    for(i in 1..11) {
+        listeEntier.add(i)
+    }
+    listeEntier.removeIf { it%3==0 }
+    println(listeEntier)
+
+    val map = mapOf("key1" to "toto", "key2" to "titi")
+    for((key,value) in map) {
+        println(key + " : "+ value)
+    }
 }
