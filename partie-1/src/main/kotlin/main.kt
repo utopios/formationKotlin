@@ -2,6 +2,9 @@
 //Auto-import
 //kotlin, collections, io, ranges text
 //java.lang.*
+import formation.kotlin.Multiple
+import formation.kotlin.addition
+import formation.kotlin.additionMultipleArgs
 import kotlin.*
 import formation.kotlin.convertToString as converter
 fun main() {
@@ -106,4 +109,8 @@ fun main() {
     labelReturn()*/
     //Exemple avec import
     //converter()
+    //println(addition(b=30))
+    println(additionMultipleArgs(1,2,5))
+
+    println(2 Multiple 5)
 }
