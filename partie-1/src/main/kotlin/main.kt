@@ -183,7 +183,7 @@ fun main() {
 
         }
     }*/
-
+    //En déclarant le type du context avant les params de l'expression lambda
     var s1 = shop {
         name = "shop 1"
         address {
@@ -193,6 +193,19 @@ fun main() {
         product("element1")
         this product "element2"
         this product "element3"
+        "keyOrder" order "valueOrder"
     }
+
+    //En déclarant le type du context comme params de l'expression lambda
+    /*var s1 = shop {
+        name = "shop 1"
+        address {
+            it.city = "lille"
+            it.street = "rue de paris"
+        }
+        product("element1")
+        this product "element2"
+        this product "element3"
+    }*/
     println(s1.toString())
 }
