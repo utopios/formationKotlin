@@ -10,7 +10,10 @@ import formation.kotlin.classes.Student
 import formation.kotlin.models.shop
 import kotlin.*
 import formation.kotlin.convertToString as converter
-fun main() {
+import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.Channel
+
+/*fun main() {
     //Déclaration de variable
     //val ou var
     //var mutable
@@ -184,7 +187,7 @@ fun main() {
         }
     }*/
     //En déclarant le type du context avant les params de l'expression lambda
-    var s1 = shop {
+    /*var s1 = shop {
         name = "shop 1"
         address {
             city = "lille"
@@ -194,7 +197,7 @@ fun main() {
         this product "element2"
         this product "element3"
         "keyOrder" order "valueOrder"
-    }
+    }*/
 
     //En déclarant le type du context comme params de l'expression lambda
     /*var s1 = shop {
@@ -207,8 +210,67 @@ fun main() {
         this product "element2"
         this product "element3"
     }*/
-    println(s1.toString())
+    //println(s1.toString())
 
-    var x:Int = 10
-    x.plus(34)
+    /*var x:Int = 10
+    x.plus(34)*/
+
+
+}
+*/
+//Coroutine avec launch
+fun main2() = runBlocking {
+    val job1 = launch {
+        /*delay(1000)
+        println("Second coroutines")*/
+        secondCoroutine()
+    }
+    val job2 = launch {
+        delay(500)
+        println("third coroutines")
+    }
+    job1.join()
+    job2.join()
+    println("Main coroutine")
+}
+
+//Coroutine avec async
+fun main3() = runBlocking {
+    val one = async { secondCoroutine() }
+    val two = async { thirdCoroutine() }
+    val result1 = one.await()
+    val result2 = two.await()
+
+    println(one.await() + two.await())
+}
+suspend fun secondCoroutine() : String {
+     delay(1000)
+     println("Second coroutine")
+     return "Result form First Request"
+}
+
+suspend fun thirdCoroutine():String {
+    delay(500)
+    println("Third coroutine")
+    return "Result form Second Request"
+}
+
+//Coroutine avec channel
+fun main() = runBlocking {
+    val channel = Channel<Any>()
+    launch {
+        for(x in 1..20)
+            channel.send(x)
+    }
+    launch {
+        for(x in 'A'..'Z'){
+            channel.send(x)
+            delay(100)
+        }
+        channel.close()
+    }
+    for(element in channel) {
+        println(element)
+    }
+
 }
