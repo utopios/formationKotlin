@@ -9,9 +9,14 @@ class AddressBuilder() {
 class ShopBuilder() {
     var name = ""
     var address:Address? = null
-    fun build() = Shop(name,address)
+    var products:MutableList<String> = mutableListOf()
+    fun build() = Shop(name,address, products)
     fun address(init : AddressBuilder.() -> Unit) {
         this.address = AddressBuilder().apply(init).build()
+    }
+
+    infix fun product(product:String) {
+        this.products.add(product)
     }
 }
 

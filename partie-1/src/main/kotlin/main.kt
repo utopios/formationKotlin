@@ -190,6 +190,9 @@ fun main() {
             city = "lille"
             street = "rue de paris"
         }
+        product("element1")
+        this product "element2"
+        this product "element3"
     }
     println(s1.toString())
 }
