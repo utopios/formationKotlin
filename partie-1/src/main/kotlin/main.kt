@@ -7,6 +7,7 @@ import formation.kotlin.classes.Car
 import formation.kotlin.classes.DataPerson
 import formation.kotlin.classes.Person
 import formation.kotlin.classes.Student
+import formation.kotlin.models.shop
 import kotlin.*
 import formation.kotlin.convertToString as converter
 fun main() {
@@ -152,7 +153,7 @@ fun main() {
     println(dataP1)
     val dataP2 = dataP1.copy(age = 33)
     println(dataP2)*/
-    val listeEntier: MutableList<Int> = mutableListOf(45,35)
+   /*val listeEntier: MutableList<Int> = mutableListOf(45,35)
     for(i in 1..11) {
         listeEntier.add(i)
     }
@@ -162,5 +163,33 @@ fun main() {
     val map = mapOf("key1" to "toto", "key2" to "titi")
     for((key,value) in map) {
         println(key + " : "+ value)
+    }*/
+
+    //Opérateur null safety
+    //var name = "toto"
+    //println(name.length)
+
+    //var name2:String? = null
+    //elvis operator
+    //println(name2?.length ?: 0)
+    //Operator !!
+    //println(name2!!.length)
+    /*shop {
+        name = "shop 1"
+        address = address {
+            city =  "lille"
+        }
+        products = products {
+
+        }
+    }*/
+
+    var s1 = shop {
+        name = "shop 1"
+        address {
+            city = "lille"
+            street = "rue de paris"
+        }
     }
+    println(s1.toString())
 }

@@ -1,4 +1,4 @@
-package kotlin.formation.models
+package formation.kotlin.models
 
 class Customer {
     private var _firstName:String = ""

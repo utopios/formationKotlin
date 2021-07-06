@@ -1,4 +1,4 @@
-package kotlin.formation.models
+package formation.kotlin.models
 
 import java.time.temporal.TemporalAmount
 import java.util.*

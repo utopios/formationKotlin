@@ -1,9 +1,9 @@
-package kotlin.formation.models
+package formation.kotlin.models
 
 class BankAccount {
-    private var _customer:Customer? = null
+    private var _customer: Customer? = null
     private var _operations:MutableList<Operation>? = null
-    val customer:Customer?
+    val customer: Customer?
         get() = _customer
 
     val operations:List<Operation>?
@@ -13,11 +13,11 @@ class BankAccount {
         _customer = customer
         _operations = mutableListOf()
     }
-    fun depot(operation:Operation):Boolean {
+    fun depot(operation: Operation):Boolean {
        return _operations?.add(operation)!!
     }
 
-    fun retrait(operation:Operation):Boolean {
+    fun retrait(operation: Operation):Boolean {
         return _operations?.add(operation)!!
     }
 }
