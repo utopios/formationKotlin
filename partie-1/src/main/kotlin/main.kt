@@ -208,4 +208,7 @@ fun main() {
         this product "element3"
     }*/
     println(s1.toString())
+
+    var x:Int = 10
+    x.plus(34)
 }

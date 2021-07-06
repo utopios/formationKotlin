@@ -40,4 +40,7 @@ open class Person(): IDisplyable {
     override fun display() {
         println("${this.firstName} ${this.lastName} ${this.age}")
     }
+    operator fun plus(person: DataPerson) {
+
+    }
 }
