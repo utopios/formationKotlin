@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">androidApp</string>
+    <string name="submit_button">Submit</string>
+    <string name="result_text">Result after button click</string>
 </resources>
