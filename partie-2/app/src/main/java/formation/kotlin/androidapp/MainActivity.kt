@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import formation.kotlin.androidapp.models.Person
+import formation.kotlin.mylibrary.BridgeGameActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
     fun goTo(view: View) {
-        val intention = Intent(this, FormActivity::class.java)
+        val intention = Intent(this, BridgeGameActivity::class.java)
         //Envoyer des données dans une intentions
-        intention.putExtra("key1", Person("toto"))
+        //intention.putExtra("key1", "test")
         startActivity(intention)
     }
 }
