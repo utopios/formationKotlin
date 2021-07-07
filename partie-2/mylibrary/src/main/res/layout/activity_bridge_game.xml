@@ -5,5 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BridgeGameActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"  android:id="@+id/bridge_game_webview">
 
+        </WebView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/bridge_game_b1" android:text="valider"></Button>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
