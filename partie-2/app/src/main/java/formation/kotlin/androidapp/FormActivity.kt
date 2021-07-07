@@ -1,6 +1,7 @@
 package formation.kotlin.androidapp
 
 import android.Manifest
+import android.app.Person
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,8 @@ class FormActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         addElementToPrincipalLayout()
+        //Récupération des données envoyées dans une intention.
+        val data = intent.getParcelableExtra<Person>("key1")
     }
 
     fun addElementToPrincipalLayout() {

@@ -1,8 +1,11 @@
 package formation.kotlin.androidapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
+import formation.kotlin.androidapp.models.Person
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,5 +37,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+    }
+    fun goTo(view: View) {
+        val intention = Intent(this, FormActivity::class.java)
+        //Envoyer des données dans une intentions
+        intention.putExtra("key1", Person("toto"))
+        startActivity(intention)
     }
 }
